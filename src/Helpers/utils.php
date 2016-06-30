@@ -1,9 +1,37 @@
 <?php
 
-namespace Helpers;
+namespace CIPack\Helpers\Utils;
+
 
 if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
+}
+
+class Utils
+{
+
+    /**
+     * @param type $p_decimalUS NUMERO DO NORMATO US
+     * @param type $p_precision NUMERO DE CASA DECIMAIS. SE FOR ZERO, NÃO SE ALTERA
+     * @return type
+     */
+    function decimal_br($p_decimalUS, $p_precision = 0)
+    {
+        /**
+         *   Converte String decimal US para BR
+         */
+        $p_decimalUS = floatval($p_decimalUS);
+        if ($p_precision > 0) {
+            return number_format($p_decimalUS, $p_precision, ',', '.');
+        } else {
+            $vlr = str_replace(',', '', $p_decimalUS);
+            $vlr = str_replace('.', ',', $vlr);
+            return $vlr;
+        }
+        return null;
+    }
+    
+
 }
 
 /*
@@ -214,26 +242,6 @@ if (!function_exists("decimal_us")) {
 
 if (!function_exists("decimal_br")) {
 
-    /**
-     * @param type $p_decimalUS NUMERO DO NORMATO US
-     * @param type $p_precision NUMERO DE CASA DECIMAIS. SE FOR ZERO, NÃO SE ALTERA
-     * @return type
-     */
-    function decimal_br($p_decimalUS, $p_precision = 0)
-    {
-        /**
-         *   Converte String decimal US para BR
-         */
-        $p_decimalUS = floatval($p_decimalUS);
-        if ($p_precision > 0) {
-            return number_format($p_decimalUS, $p_precision, ',', '.');
-        } else {
-            $vlr = str_replace(',', '', $p_decimalUS);
-            $vlr = str_replace('.', ',', $vlr);
-            return $vlr;
-        }
-        return null;
-    }
 
 }
 
@@ -347,7 +355,7 @@ if (!function_exists('link_popup')) {
             'resizable'  => 'yes',
             'screenx'    => '0',
             'screeny'    => '0',
-        );
+            );
         # ATRIBUTOS DO PUPUP
         $atts = (empty($p_atts)) ? $atts : $p_atts;
         # PARAMETROS PARA TEMPLATE POPUP
@@ -582,5 +590,5 @@ if (!function_exists("segments_until")) {
     $CI= &get_instance();
     $CI->uri->segment_array();
     return implode(array_slice($CI->uri->segment_array(),0,$segment_number),'/');
-  }
+}
 }
