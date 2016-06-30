@@ -1,6 +1,6 @@
 <?php
 
-namespace CIPack\Helpers\Utils;
+namespace CIPack\Helpers;
 
 
 if (!defined('BASEPATH')) {
@@ -15,7 +15,7 @@ class Utils
      * @param type $p_precision NUMERO DE CASA DECIMAIS. SE FOR ZERO, NÃO SE ALTERA
      * @return type
      */
-    function decimal_br($p_decimalUS, $p_precision = 0)
+    public static function decimal_br($p_decimalUS, $p_precision = 0)
     {
         /**
          *   Converte String decimal US para BR
