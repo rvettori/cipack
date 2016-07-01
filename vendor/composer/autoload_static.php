@@ -13,7 +13,10 @@ class ComposerStaticInitc71ba311d8000a3c0d96528a925ccc11
             array (
                 0 => __DIR__ . '/../..' . '/src',
             ),
-            'HelloWorld' => 
+        ),
+        'C' => 
+        array (
+            'CIPack' => 
             array (
                 0 => __DIR__ . '/../..' . '/src',
             ),

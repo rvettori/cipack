@@ -11,8 +11,7 @@
   "require": {},
   "autoload": {
     "psr-0": {
-      "HelloWorld": "src/",
-      "Helpers": "src/"
+      "CIPack": "src/"
     }
   }
 }

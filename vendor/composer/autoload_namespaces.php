@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Helpers' => array($baseDir . '/src'),
-    'HelloWorld' => array($baseDir . '/src'),
+    'CIPack' => array($baseDir . '/src'),
 );
