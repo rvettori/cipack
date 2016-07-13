@@ -1,6 +1,6 @@
 <?php 
 
-namespace CIPack\HelloWorld;
+namespace CIPack;
 
 class SayHello
 {

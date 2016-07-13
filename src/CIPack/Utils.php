@@ -1,6 +1,6 @@
 <?php
 
-namespace CIPack\Helpers;
+namespace CIPack;
 
 
 class Utils

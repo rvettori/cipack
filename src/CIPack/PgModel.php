@@ -1,6 +1,8 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class PgModel extends CI_Model
+namespace CIPack;
+
+class PgModel extends \CI_Model
 {
 
     public $table       = null; # Table name
