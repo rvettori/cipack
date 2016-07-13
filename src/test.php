@@ -7,6 +7,7 @@ use CIPack\Helpers\Utils;
 
 echo SayHello::world() . "\n";
 
-echo Utils::decimal_br(12.76) . "\n";
+echo decimal_br(12.76) . "\n";
 
-echo Utils::date_br() . "\n";
+echo date_br() . "\n";
+

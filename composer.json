@@ -10,8 +10,10 @@
   "minimum-stability": "dev",
   "require": {},
   "autoload": {
+    "files": ["src/helpers.func.php"],
     "psr-0": {
       "CIPack": "src/"
     }
   }
 }
+
