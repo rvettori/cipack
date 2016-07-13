@@ -273,10 +273,20 @@ function decimal_br($p_decimalUS, $p_precision = 0)
     return preg_replace("/[^0-9]/", "", $p_numero_str);
   }
 
-  function segments_until($segment_number) {
+  function segments_until($segment_number) 
+  {
     $CI= &get_instance();
     $CI->uri->segment_array();
     return implode(array_slice($CI->uri->segment_array(),0,$segment_number),'/');
   }
 
+
+  function form_has_error($field, $return = true)
+  {
+      $has = form_error($field);
+      if (empty($has) === false) {
+          return $return;
+      }
+      return false;
+  }
 
