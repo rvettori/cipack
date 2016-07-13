@@ -2,9 +2,7 @@
 
 function decimal_br($p_decimalUS, $p_precision = 0)
 {
-      /**
-       *   Converte String decimal US para BR
-       */
+
       $p_decimalUS = floatval($p_decimalUS);
       if ($p_precision > 0) {
         return number_format($p_decimalUS, $p_precision, ',', '.');
