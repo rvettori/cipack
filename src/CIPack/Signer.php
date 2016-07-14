@@ -33,7 +33,7 @@ class Signer
 
     log_message('debug', json_encode($this->ci->config->item('signer')));
 
-    $this->settings = array_merge($config, $this->ci->config->item('signer'));
+    $this->settings = array_merge($config, ($cfg = $this->ci->config->item('signer') ?: []));
   }
 
   public function login($login, $password)
